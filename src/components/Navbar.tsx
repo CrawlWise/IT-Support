@@ -1,57 +1,47 @@
-import { motion } from "motion/react";
-import { Moon, Sun, Laptop, Shield, Clock, PhoneCall } from "lucide-react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
 
 export default function Navbar() {
   return (
-    <motion.header 
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
-    >
-      <div className="container flex h-16 items-center justify-between mx-auto px-4">
-        <div className="flex items-center gap-2 font-bold text-xl">
-          <div className="bg-primary text-primary-foreground p-1.5 rounded-lg">
-            <Moon className="h-5 w-5" />
-          </div>
-          <span className="tracking-tight text-primary">NightOwl IT</span>
+    <header className="sticky top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm">
+      <nav className="flex justify-between items-center h-16 px-6 max-w-7xl mx-auto">
+        <div className="flex items-center gap-2">
+          <Link href="/" className="text-xl font-bold tracking-tighter text-slate-950 dark:text-slate-50">
+            Digital Guardian IT
+          </Link>
         </div>
-
-        <NavigationMenu className="hidden md:flex">
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuLink href="#services" className={navigationMenuTriggerStyle()}>
-                Services
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink href="#pricing" className={navigationMenuTriggerStyle()}>
-                Pricing
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink href="#contact" className={navigationMenuTriggerStyle()}>
-                Support
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-
-        <div className="flex items-center gap-4">
-          <Button variant="outline" size="sm" className="hidden sm:flex gap-2">
-            <PhoneCall className="h-4 w-4" />
-            <span>Emergency Line</span>
+        <div className="hidden md:flex items-center gap-8 font-sans tracking-tight text-sm font-medium">
+          <Link
+            className="text-slate-950 dark:text-white font-semibold border-b-2 border-orange-600"
+            href="/"
+          >
+            Home
+          </Link>
+          <Link
+            className="text-slate-500 dark:text-slate-400 hover:text-orange-600 transition-colors duration-200"
+            href="/services"
+          >
+            Services
+          </Link>
+          <Link
+            className="text-slate-500 dark:text-slate-400 hover:text-orange-600 transition-colors duration-200"
+            href="/about"
+          >
+            About
+          </Link>
+          <Link
+            className="text-slate-500 dark:text-slate-400 hover:text-orange-600 transition-colors duration-200"
+            href="/contact"
+          >
+            Contact
+          </Link>
+        </div>
+        <Link href="/emergency-support">
+          <Button className="active:scale-95 transition-transform bg-on-tertiary-container text-white px-5 py-2 rounded-lg font-medium text-sm hover:bg-orange-700 transition-colors border-none">
+            Emergency Support
           </Button>
-          <Button size="sm">Get Started</Button>
-        </div>
-      </div>
-    </motion.header>
+        </Link>
+      </nav>
+    </header>
   );
 }

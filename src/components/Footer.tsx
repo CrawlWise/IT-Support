@@ -1,57 +1,47 @@
-import { Moon, Github, Twitter, Linkedin, Mail } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-background border-t py-12 md:py-24">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-2 font-bold text-2xl mb-6">
-              <div className="bg-primary text-primary-foreground p-1.5 rounded-lg">
-                <Moon className="h-6 w-6" />
-              </div>
-              <span className="tracking-tight text-primary">NightOwl IT</span>
-            </div>
-            <p className="text-muted-foreground max-w-sm mb-6 leading-relaxed">
-              Premium off-hours and weekend IT support for businesses and individuals. We're here when others are not.
-            </p>
-            <div className="flex gap-4">
-              {[Twitter, Github, Linkedin, Mail].map((Icon, i) => (
-                <a key={i} href="#" className="p-2 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all">
-                  <Icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h4 className="font-bold text-lg mb-6">Services</h4>
-            <ul className="space-y-4 text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Off-Hours Support</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Weekend Coverage</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Infrastructure Mgmt</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Cloud Solutions</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-bold text-lg mb-6">Company</h4>
-            <ul className="space-y-4 text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Our Team</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Terms of Service</a></li>
-            </ul>
+    <footer className="bg-slate-950 dark:bg-black w-full py-12 px-6 mt-auto border-t border-slate-800">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+        <div className="md:col-span-1">
+          <span className="text-lg font-bold text-white mb-6 block">Digital Guardian IT</span>
+          <p className="text-slate-400 text-sm leading-relaxed mb-6">The elite redundancy layer for enterprise IT infrastructure. We never sleep.</p>
+          <div className="flex gap-4">
+            <span className="material-symbols-outlined text-orange-500 cursor-pointer hover:text-white">public</span>
+            <span className="material-symbols-outlined text-orange-500 cursor-pointer hover:text-white">shield</span>
           </div>
         </div>
-
-        <div className="pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>© 2026 NightOwl IT Services. All rights reserved.</p>
-          <div className="flex gap-8">
-            <a href="#" className="hover:text-primary transition-colors">Status</a>
-            <a href="#" className="hover:text-primary transition-colors">Support</a>
-            <a href="#" className="hover:text-primary transition-colors">API</a>
+        <div className="flex flex-col gap-4">
+          <span className="text-white font-bold text-sm uppercase tracking-wider">Services</span>
+          <Link className="text-slate-400 text-sm hover:text-white transition-colors" href="/emergency-support">Emergency Support</Link>
+          <Link className="text-slate-400 text-sm hover:text-white transition-colors" href="/services">Managed Security</Link>
+          <Link className="text-slate-400 text-sm hover:text-white transition-colors" href="/services">Cloud Migration</Link>
+          <Link className="text-slate-400 text-sm hover:text-white transition-colors" href="/services">Backup Recovery</Link>
+        </div>
+        <div className="flex flex-col gap-4">
+          <span className="text-white font-bold text-sm uppercase tracking-wider">Company</span>
+          <Link className="text-slate-400 text-sm hover:text-white transition-colors" href="/about">About Us</Link>
+          <Link className="text-slate-400 text-sm hover:text-white transition-colors" href="#">Privacy Policy</Link>
+          <Link className="text-slate-400 text-sm hover:text-white transition-colors" href="#">Terms of Service</Link>
+          <Link className="text-slate-400 text-sm hover:text-white transition-colors" href="#">Service Status</Link>
+        </div>
+        <div className="flex flex-col gap-4">
+          <span className="text-white font-bold text-sm uppercase tracking-wider">Support</span>
+          <Link className="text-slate-400 text-sm hover:text-white transition-colors" href="/contact">Support Desk</Link>
+          <Link className="text-slate-400 text-sm hover:text-white transition-colors" href="#">LinkedIn</Link>
+          <Link className="text-slate-400 text-sm hover:text-white transition-colors" href="#">Twitter</Link>
+          <div className="mt-4 p-4 bg-slate-900 rounded border border-slate-800">
+            <p className="text-xs text-slate-500 mb-2">Emergency Hotline</p>
+            <p className="text-orange-500 font-bold">1-800-GUARDIAN</p>
           </div>
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p className="text-slate-400 text-sm">© 2024 Digital Guardian IT. All rights reserved.</p>
+        <div className="flex gap-6">
+          <span className="text-slate-500 text-xs">SOC2 Certified</span>
+          <span className="text-slate-500 text-xs">HIPAA Compliant</span>
         </div>
       </div>
     </footer>
