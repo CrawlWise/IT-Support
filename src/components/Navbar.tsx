@@ -1,57 +1,55 @@
+"use client";
+
 import { motion } from "motion/react";
-import { Moon, Sun, Laptop, Shield, Clock, PhoneCall } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/#services" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+  ];
+
   return (
-    <motion.header 
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
-    >
-      <div className="container flex h-16 items-center justify-between mx-auto px-4">
-        <div className="flex items-center gap-2 font-bold text-xl">
-          <div className="bg-primary text-primary-foreground p-1.5 rounded-lg">
-            <Moon className="h-5 w-5" />
-          </div>
-          <span className="tracking-tight text-primary">NightOwl IT</span>
+    <header className="sticky top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm">
+      <nav className="flex justify-between items-center h-16 px-6 max-w-7xl mx-auto">
+        <Link href="/" className="flex items-center gap-2">
+          <span className="text-xl font-bold tracking-tighter text-slate-950 dark:text-slate-50">
+            Digital Guardian IT
+          </span>
+        </Link>
+
+        <div className="hidden md:flex items-center gap-8 font-sans tracking-tight text-sm font-medium">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href || (link.href.startsWith("/#") && pathname === "/");
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={cn(
+                  "transition-colors duration-200 hover:text-on-tertiary-container",
+                  isActive
+                    ? "text-slate-950 dark:text-white font-semibold border-b-2 border-on-tertiary-container"
+                    : "text-slate-500 dark:text-slate-400"
+                )}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </div>
 
-        <NavigationMenu className="hidden md:flex">
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuLink href="#services" className={navigationMenuTriggerStyle()}>
-                Services
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink href="#pricing" className={navigationMenuTriggerStyle()}>
-                Pricing
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink href="#contact" className={navigationMenuTriggerStyle()}>
-                Support
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-
-        <div className="flex items-center gap-4">
-          <Button variant="outline" size="sm" className="hidden sm:flex gap-2">
-            <PhoneCall className="h-4 w-4" />
-            <span>Emergency Line</span>
-          </Button>
-          <Button size="sm">Get Started</Button>
-        </div>
-      </div>
-    </motion.header>
+        <Link href="/emergency">
+          <button className="active:scale-95 transition-all bg-on-tertiary-container text-white px-5 py-2 rounded-lg font-medium text-sm hover:brightness-110">
+            Emergency Support
+          </button>
+        </Link>
+      </nav>
+    </header>
   );
 }

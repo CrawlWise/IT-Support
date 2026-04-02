@@ -2,7 +2,6 @@ import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Zap, Shield, Globe } from "lucide-react";
 
 const plans = [
   {
@@ -17,7 +16,7 @@ const plans = [
       "Security Monitoring",
       "Up to 5 Users"
     ],
-    icon: Zap,
+    icon: "bolt",
     popular: false
   },
   {
@@ -33,7 +32,7 @@ const plans = [
       "Up to 15 Users",
       "Database Backups"
     ],
-    icon: Shield,
+    icon: "shield",
     popular: true
   },
   {
@@ -49,7 +48,7 @@ const plans = [
       "Unlimited Users",
       "Custom SLA"
     ],
-    icon: Globe,
+    icon: "public",
     popular: false
   }
 ];
@@ -84,9 +83,9 @@ export default function Pricing() {
                   </div>
                 )}
                 <CardHeader>
-                  <div className="flex justify-between items-center mb-4">
+                  <div className="flex justify-between items-center mb-4 text-left">
                     <div className="p-2 rounded-xl bg-primary/10 text-primary">
-                      <plan.icon className="h-6 w-6" />
+                      <span className="material-symbols-outlined">{plan.icon}</span>
                     </div>
                   </div>
                   <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
@@ -97,10 +96,10 @@ export default function Pricing() {
                     <span className="text-4xl font-extrabold tracking-tight">{plan.price}</span>
                     <span className="text-muted-foreground ml-1">{plan.period}</span>
                   </div>
-                  <ul className="space-y-4">
+                  <ul className="space-y-4 text-left">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
-                        <Check className="h-5 w-5 text-primary shrink-0" />
+                        <span className="material-symbols-outlined text-primary shrink-0 text-[20px]">check</span>
                         <span>{feature}</span>
                       </li>
                     ))}

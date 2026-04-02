@@ -1,85 +1,38 @@
-import { motion } from "motion/react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Star, Quote } from "lucide-react";
-
-const testimonials = [
-  {
-    name: "Sarah Jenkins",
-    role: "CTO, Global Logistics",
-    content: "NightOwl IT saved our operations during a critical server failure at 3 AM. Their 15-minute response time isn't just a marketing claim—it's a reality.",
-    avatar: "SJ",
-    rating: 5
-  },
-  {
-    name: "Marcus Chen",
-    role: "Founder, TechStream",
-    content: "As a startup with teams in Europe and Asia, we needed support that doesn't sleep. The 'Night Shift' plan has been a game-changer for our productivity.",
-    avatar: "MC",
-    rating: 5
-  },
-  {
-    name: "Elena Rodriguez",
-    role: "IT Manager, RetailHub",
-    content: "Weekend maintenance used to be a nightmare for our internal team. Now, we leave it to the experts at NightOwl and wake up to everything running perfectly.",
-    avatar: "ER",
-    rating: 5
-  },
-  {
-    name: "David Smith",
-    role: "Operations Lead, FinSecure",
-    content: "The level of expertise and security protocols they follow is impressive. They've become an essential extension of our IT department.",
-    avatar: "DS",
-    rating: 5
-  }
-];
-
 export default function Testimonials() {
-  return (
-    <section className="py-24 bg-secondary/10">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <Badge variant="outline" className="mb-4 px-4 py-1 border-primary/30 text-primary">Success Stories</Badge>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">Trusted by Industry Leaders</h2>
-          <p className="text-lg text-muted-foreground">
-            Don't just take our word for it. Here's what our clients say about our off-hours support.
-          </p>
-        </div>
+  const testimonials = [
+    {
+      text: "When our primary data center went down at 2 AM on a Sunday, Digital Guardian had us back online before our internal team even woke up. Their response speed is unreal.",
+      author: "Marcus Chen",
+      role: "CTO, Vertex Logistics",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCbagj6Hx8bLlQPuboOFMFvd_0Rmwmx9UvAlK3yBH7CRPhLBvj0DWLON8_yDdp_Qb4jfd3h2xj6ol898YLFh3JSuLUxp-ipW-Z36ORsMad87v8dL-baWJF3con-RXoCJZhGyGWn8tx80L1-IX8Zrl5Cpp6xIa3DNhW7Ap67e56gaz7L-fAg7-WgOuycD8gAj8M4hPuy5nnrLfpuOx4_vYx-xpdO9XqMk6vQMD7BQL-xaFPSl3rURTwhYlv4wPv0pDGrZtrv2CGhcQE"
+    },
+    {
+      text: "The piece of mind we get knowing someone is monitoring our security during the weekend is worth every penny. They are proactive, not just reactive.",
+      author: "Sarah Jenkins",
+      role: "Ops Director, BlueStream Health",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBcHXAq8GSvu7PC26j3dCh_iemAUean0aDBSspN_g61P9spTLxrkVtZmZBM-iclbixWBq5K2x6K-FYuanHtmzC8kt5UqXKBSGj7KuQnhMumzUeQq9KAufWhVKb5bxVg_Xxa6_gVHRGEt0Xi2lgLJfpfbW99m9KIfNHU-q61h3G7u57fhMBoxl2DhbiHDLl-r8vnRsHWNvObnOsSJJw2lngW6OW1wC042Kc2InZN9WEUclY-g2IIMrsTlsg5hB0GEe4vCAwhpQgd2qQ"
+    }
+  ];
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card className="h-full border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
-                <CardContent className="pt-6">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                    ))}
-                  </div>
-                  <div className="relative mb-6">
-                    <Quote className="absolute -top-2 -left-2 h-8 w-8 text-primary/10 -z-10" />
-                    <p className="text-muted-foreground italic leading-relaxed">
-                      "{testimonial.content}"
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
-                      {testimonial.avatar}
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-sm">{testimonial.name}</h4>
-                      <p className="text-xs text-muted-foreground">{testimonial.role}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+  return (
+    <section className="py-24 bg-surface-container-high relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-3xl font-bold tracking-tight mb-16 text-center">Trusted by Industry Leaders</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {testimonials.map((t, i) => (
+            <div key={i} className="bg-surface-container-lowest p-10 rounded-2xl relative">
+              <span className="material-symbols-outlined text-surface-dim absolute top-6 right-6 text-6xl opacity-20">format_quote</span>
+              <p className="text-lg font-medium text-on-surface mb-8 relative z-10 italic">"{t.text}"</p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full overflow-hidden">
+                  <img className="w-full h-full object-cover" src={t.image} alt={t.author} />
+                </div>
+                <div>
+                  <p className="font-bold text-sm">{t.author}</p>
+                  <p className="text-xs text-on-primary-container">{t.role}</p>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
