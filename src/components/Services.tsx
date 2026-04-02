@@ -1,6 +1,27 @@
 import Link from "next/link";
 
 export default function Services() {
+  const services = [
+    {
+      title: "Emergency IT",
+      description: "Immediate intervention for server outages, cyber-attacks, and hardware failures at any hour.",
+      icon: "notification_important",
+      href: "/emergency"
+    },
+    {
+      title: "Weekend Support",
+      description: "Expert technical assistance during Saturdays and Sundays, ensuring business continuity without delays.",
+      icon: "weekend",
+      href: "/weekend"
+    },
+    {
+      title: "Off-Hours Monitoring",
+      description: "Proactive system health checks and threat detection while your primary staff is offline.",
+      icon: "visibility",
+      href: "/#services"
+    }
+  ];
+
   return (
     <section className="bg-surface-container-low py-24">
       <div className="max-w-7xl mx-auto px-6">
