@@ -1,16 +1,13 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
 export default function Contact() {
   return (
     <div className="bg-surface-custom font-body text-on-surface-custom min-h-screen flex flex-col">
-      <Navbar />
       <main className="flex-grow max-w-7xl mx-auto w-full px-6 py-12 md:py-20">
         {/* Page Header */}
         <div className="mb-16 max-w-2xl">
           <h1 className="text-5xl font-bold tracking-tight mb-4 text-on-surface-custom">Secure Your Infrastructure</h1>
-          <p className="text-on-primary-container text-lg leading-relaxed">Request a consultation or emergency IT audit. Our digital guardians are standing by to stabilize your network operations.</p>
+          <p className="text-on-primary-container text-lg leading-relaxed">Request a consultation or emergency IT audit. Our OutOfHours IT Support specialists are standing by to stabilize your network operations.</p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Contact Details & Map */}
@@ -22,7 +19,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-sm font-bold uppercase tracking-widest text-on-primary-container mb-1">Direct Line</h3>
-                  <p className="text-xl font-semibold">+1 (555) 012-3456</p>
+                  <p className="text-xl font-semibold">xxx-xxx-xxxx</p>
                   <p className="text-sm text-on-primary-container">Available 24/7 for Enterprise Clients</p>
                 </div>
               </div>
@@ -32,7 +29,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-sm font-bold uppercase tracking-widest text-on-primary-container mb-1">Secure Email</h3>
-                  <p className="text-xl font-semibold">guardian@dg-it.com</p>
+                  <p className="text-xl font-semibold">support@outofhours .com</p>
                   <p className="text-sm text-on-primary-container">PGP Encrypted communications supported</p>
                 </div>
               </div>
@@ -113,7 +110,6 @@ export default function Contact() {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

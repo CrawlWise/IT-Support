@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-slate-950 dark:bg-black w-full py-12 px-6 mt-auto border-t border-slate-800">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
         <div className="md:col-span-1">
-          <span className="text-lg font-bold text-white mb-6 block">Digital Guardian IT</span>
+          <span className="text-lg font-bold text-white mb-6 block">OutOfHours IT Support LTD</span>
           <p className="text-slate-400 text-sm leading-relaxed mb-6">The elite redundancy layer for enterprise IT infrastructure. We never sleep.</p>
           <div className="flex gap-4">
             <span className="material-symbols-outlined text-orange-500 cursor-pointer hover:text-white">public</span>
@@ -33,12 +33,12 @@ export default function Footer() {
           <Link className="text-slate-400 text-sm hover:text-white transition-colors" href="#">Twitter</Link>
           <div className="mt-4 p-4 bg-slate-900 rounded border border-slate-800">
             <p className="text-xs text-slate-500 mb-2">Emergency Hotline</p>
-            <p className="text-orange-500 font-bold">1-800-GUARDIAN</p>
+            <p className="text-orange-500 font-bold">xxx-xxx-xxxx</p>
           </div>
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="text-slate-400 text-sm">© 2024 Digital Guardian IT. All rights reserved.</p>
+        <p className="text-slate-400 text-sm">OutOfHours IT Support LTD © 2026. All rights reserved.</p>
         <div className="flex gap-6">
           <span className="text-slate-500 text-xs">SOC2 Certified</span>
           <span className="text-slate-500 text-xs">HIPAA Compliant</span>

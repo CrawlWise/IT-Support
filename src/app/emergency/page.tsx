@@ -1,10 +1,6 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-
 export default function EmergencyPage() {
   return (
     <div className="min-h-screen bg-surface font-body text-on-surface flex flex-col">
-      <Navbar />
       <main className="flex-grow">
         {/* Hero Section */}
         <section className="relative pt-20 pb-32 overflow-hidden">
@@ -15,7 +11,7 @@ export default function EmergencyPage() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-on-tertiary-container opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-on-tertiary-container"></span>
                 </span>
-                Active Guardian Status
+                Active OutOfHours IT Support Status
               </div>
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-on-surface mb-8 leading-[1.1]">
                 Emergency IT Support <br />
@@ -138,7 +134,6 @@ export default function EmergencyPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

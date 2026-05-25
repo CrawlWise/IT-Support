@@ -1,10 +1,6 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-
 export default function EmergencySupport() {
   return (
     <div className="bg-surface-custom font-body text-on-surface-custom selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
-      <Navbar />
       <main>
         {/* Hero Section */}
         <section className="relative pt-20 pb-32 overflow-hidden">
@@ -15,7 +11,7 @@ export default function EmergencySupport() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-on-tertiary-container opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-on-tertiary-container"></span>
                 </span>
-                Active Guardian Status
+                Active OutOfHours IT Support Status
               </div>
               <h1 className="text-5xl md:text-7xl font-headline font-extrabold tracking-tight text-on-surface-custom mb-8 leading-[1.1]">
                 Emergency IT Support <br />
@@ -33,7 +29,7 @@ export default function EmergencySupport() {
                   <div className="text-center sm:text-left">
                     <span className="block text-xs font-bold text-on-primary-container uppercase tracking-widest mb-1">Priority Hotline</span>
                     <a className="block text-3xl font-black text-on-surface-custom hover:text-on-tertiary-container transition-colors" href="tel:1800GUARDIAN">
-                      1-800-GUARDIAN
+                      xxx-xxx-xxxx
                     </a>
                   </div>
                 </div>
@@ -151,7 +147,6 @@ export default function EmergencySupport() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

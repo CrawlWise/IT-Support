@@ -13,12 +13,12 @@ export default function Hero() {
             Live Support 24/7/365
           </div>
           <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight text-on-surface-custom mb-8 leading-[1.1]">
-            24/7 IT Support <br />
+            Reliable IT Support <br />
             <span className="text-on-tertiary-container">When Others Are Off</span>
           </h1>
           <p className="text-lg text-on-primary-container max-w-xl leading-relaxed mb-10">
-            Stop waiting for Monday morning. Our elite team of engineers is standing by to resolve critical issues, handle weekend migrations, and monitor your infrastructure while you sleep.
-          </p>
+           Our team of experienced engineers is available to resolve critical issues, manage weekend migrations, and provide infrastructure monitoring around the clock.
+           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/emergency-support">
               <Button className="bg-on-tertiary-container text-white px-8 py-4 h-auto rounded-md font-bold text-lg hover:brightness-110 transition-all emergency-glow border-none">

@@ -13,7 +13,7 @@ export default function ContactForm() {
     setTimeout(() => {
       setIsSubmitting(false);
       toast.success("Request initialized successfully!", {
-        description: "Our digital guardians will contact you shortly.",
+        description: "Our OutOfHours IT Support team will contact you shortly.",
         duration: 5000,
       });
       (e.target as HTMLFormElement).reset();

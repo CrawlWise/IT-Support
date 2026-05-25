@@ -1,11 +1,10 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+
 import Link from "next/link";
 
 export default function WeekendSupportPage() {
   return (
     <div className="min-h-screen bg-surface font-body text-on-surface flex flex-col">
-      <Navbar />
+
       <main className="flex-grow">
         {/* Hero Section */}
         <section className="relative min-h-[700px] flex items-center bg-surface overflow-hidden pt-12">
@@ -19,7 +18,7 @@ export default function WeekendSupportPage() {
                 Your Business Doesn't Stop. <span className="text-on-tertiary-container">Neither Do We.</span>
               </h1>
               <p className="text-lg md:text-xl text-on-primary-container leading-relaxed max-w-xl mb-10">
-                Elite IT orchestration for the hours that matter most. Secure your weekends and late nights with our dedicated Guardian engineers.
+                Elite IT orchestration for the hours that matter most. Secure your weekends and late nights with our dedicated OutOfHours IT Support engineers.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/emergency">
@@ -67,7 +66,7 @@ export default function WeekendSupportPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-3 h-3 rounded-full bg-on-tertiary-container"></span>
-                  <span>Guardian Hours</span>
+                  <span>OutOfHours IT Support Hours</span>
                 </div>
               </div>
             </div>
@@ -158,7 +157,7 @@ export default function WeekendSupportPage() {
               <div className="relative z-10">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight">Ready for Uninterrupted Stability?</h2>
                 <p className="text-primary-fixed-dim text-lg mb-12 max-w-2xl mx-auto">
-                  Join 400+ businesses that trust Digital Guardian for their critical off-hours operations.
+                  Join 400+ businesses that trust Digital OutOfHours IT Support for their critical off-hours operations.
                 </p>
                 <Link href="/contact">
                   <button className="bg-on-tertiary-container text-white px-10 py-5 rounded-md font-bold text-xl hover:scale-105 transition-transform active:scale-95">
@@ -170,7 +169,6 @@ export default function WeekendSupportPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

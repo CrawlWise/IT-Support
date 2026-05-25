@@ -1,11 +1,8 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
 export default function About() {
   return (
     <div className="bg-surface-custom font-body text-on-surface-custom min-h-screen flex flex-col">
-      <Navbar />
       <main>
         {/* Hero Section */}
         <section className="relative pt-24 pb-32 overflow-hidden">
@@ -14,10 +11,10 @@ export default function About() {
               <div className="lg:col-span-7">
                 <span className="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-widest uppercase text-on-tertiary-container bg-tertiary-fixed rounded">Always Vigilant</span>
                 <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-on-surface-custom mb-8 leading-[1.1]">
-                  The <span className="text-on-tertiary-container">Guardian</span> Never Sleeps.
+                  The <span className="text-on-tertiary-container">OutOfHours IT Support</span> Never Sleeps.
                 </h1>
                 <p className="text-xl md:text-2xl text-on-primary-container leading-relaxed max-w-2xl">
-                  We are Digital Guardian IT. When the world goes home and offices go dark, we stand guard. Our mission is to provide unwavering IT stability during the hours when your business is most vulnerable.
+                  We are Out Of Hours IT Support IT. When the world goes home and offices go dark, we stand guard. Our mission is to provide unwavering IT stability during the hours when your business is most vulnerable.
                 </p>
               </div>
             </div>
@@ -49,7 +46,7 @@ export default function About() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 text-on-surface-custom">The Gap in the Market</h2>
                 <div className="space-y-6 text-lg text-on-primary-container leading-relaxed">
                   <p>For years, small and mid-sized enterprises have been forced to wait until Monday morning for critical fixes. We saw businesses lose thousands in weekend revenue because of a simple server glitch or a security breach that happened at midnight on a Saturday.</p>
-                  <p>Digital Guardian IT was founded to bridge this gap. We aren't just an IT firm; we are an elite response team specializing in off-hours, weekends, and holiday support. We believe that stability is a right, not a weekday-only privilege.</p>
+                  <p>OutOfHours IT Support IT was founded to bridge this gap. We aren't just an IT firm; we are an elite response team specializing in off-hours, weekends, and holiday support. We believe that stability is a right, not a weekday-only privilege.</p>
                 </div>
               </div>
             </div>
@@ -61,7 +58,7 @@ export default function About() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-on-surface-custom mb-4">Foundation of Trust</h2>
-              <p className="text-on-primary-container max-w-xl">Our core values are the pillars that support our Guardian promise.</p>
+              <p className="text-on-primary-container max-w-xl">Our core values are the pillars that support our OutOfHours IT Support promise.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Reliability */}
@@ -159,7 +156,7 @@ export default function About() {
             <div className="bg-primary-container-custom rounded-2xl p-12 text-center relative overflow-hidden">
               <div className="relative z-10">
                 <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Ready for Peace of Mind?</h2>
-                <p className="text-on-primary-container text-lg mb-10 max-w-2xl mx-auto">Don't wait for your next outage to find out your IT support is asleep. Partner with the Guardian today.</p>
+                <p className="text-on-primary-container text-lg mb-10 max-w-2xl mx-auto">Don't wait for your next outage to find out your IT support is asleep. Partner with the OutOfHours IT Support today.</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button className="bg-on-tertiary-container text-white px-8 py-4 h-auto rounded-md font-bold hover:brightness-110 transition-all border-none">Start Your Protection</Button>
                   <Button variant="outline" className="border border-outline-variant/30 text-white px-8 py-4 h-auto rounded-md font-bold hover:bg-white/5 transition-all">Talk to a Senior Architect</Button>
@@ -170,7 +167,6 @@ export default function About() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }
